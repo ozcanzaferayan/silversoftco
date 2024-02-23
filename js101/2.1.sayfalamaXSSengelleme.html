@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="sayfaDegistir(0)">JS101'e git</button>
+    <button onclick="sayfaDegistir(1)">React101'e git</button>
+    <div id="sayfa"></div>
+    <script>
+      var sayfa = document.getElementById("sayfa");
+      var hello2 = "<img src='#' onerror=alert(1) />";
+      function sayfaDegistir(sayfaNo) {
+        sayfa.innerHTML = "";
+        var div = document.createElement("div");
+        var h1 = document.createElement("h1");
+        var p = document.createElement("p");
+        if (sayfaNo === 0) {
+          h1.textContent = "JS 101";
+        } else {
+          h1.textContent = "React 101";
+        }
+        p.textContent = `Merhaba ${hello2} 101`;
+        console.log("test");
+        div.appendChild(h1);
+        div.appendChild(p);
+        sayfa.appendChild(div);
+      }
+    </script>
+  </body>
+</html>

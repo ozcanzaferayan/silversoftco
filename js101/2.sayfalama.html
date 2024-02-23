@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="sayfaDegistir(0)">JS101'e git</button>
+    <button onclick="sayfaDegistir(1)">React101'e git</button>
+    <div id="sayfa"></div>
+    <script>
+      var sayfa = document.getElementById("sayfa");
+      //   var hello2 = "React"
+      var hello2 = "<img src='#' onerror=alert(1) />";
+      var sayfalar = [
+        `
+        <div>
+          <h1>JS 101</h1>
+          <p>Merhaba JS 101</p>
+        </div>`,
+        `
+        <div>
+          <h1>React 101</h1>
+          <p>Merhaba ${hello2} 101</p>
+        </div>
+        `,
+      ];
+      function sayfaDegistir(sayfaNo) {
+        sayfa.innerHTML = sayfalar[sayfaNo];
+      }
+    </script>
+  </body>
+</html>

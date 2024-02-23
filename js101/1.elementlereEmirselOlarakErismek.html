@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" name="isim" placeholder="isminiz" value="Zafer" />
+    <input type="text" name="soyisim" placeholder="Soyisminiz" value="Ayan" />
+    <button onclick="gonder()">Gönder</button>
+
+    <script>
+      function gonder() {
+        var isimElemanlari = document.getElementsByName("isim");
+        var soyisimElemanlari = document.getElementsByName("soyisim");
+        var isimElemani = isimElemanlari[0];
+        var soyisimElemani = soyisimElemanlari[0];
+        var isim = isimElemani.value;
+        var soyisim = soyisimElemani.value;
+        document.write("Merhaba " + isim + " " + soyisim + "!");
+      }
+    </script>
+  </body>
+</html>
